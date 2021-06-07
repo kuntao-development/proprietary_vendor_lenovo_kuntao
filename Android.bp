@@ -222,6 +222,7 @@ prebuilt_etc_xml {
 	name: "android.hardware.gnss@2.0-service-qti",
 	owner: "lenovo",
 	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.gnss@2.0-service-qti.xml",
+	filename_from_src: true,
 	sub_dir: "vintf/manifest",
 	soc_specific: true,
 }
@@ -230,6 +231,7 @@ prebuilt_etc_xml {
 	name: "vendor.qti.gnss@3.0-service",
 	owner: "lenovo",
 	src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.gnss@3.0-service.xml",
+	filename_from_src: true,
 	sub_dir: "vintf/manifest",
 	soc_specific: true,
 }
@@ -238,6 +240,7 @@ prebuilt_etc_xml {
 	name: "manifest_android.hardware.drm@1.3-service.widevine",
 	owner: "lenovo",
 	src: "proprietary/vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml",
+	filename_from_src: true,
 	sub_dir: "vintf/manifest",
 	soc_specific: true,
 }
@@ -246,6 +249,7 @@ prebuilt_etc_xml {
 	name: "manifest_android.hardware.drm@1.3-service.clearkey",
 	owner: "lenovo",
 	src: "proprietary/vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.clearkey.xml",
+	filename_from_src: true,
 	sub_dir: "vintf/manifest",
 	soc_specific: true,
 }
