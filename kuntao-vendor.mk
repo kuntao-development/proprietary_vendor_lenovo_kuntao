@@ -64,7 +64,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/kuntao/proprietary/system_ext/etc/permissions/telephonyservice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/telephonyservice.xml \
     vendor/lenovo/kuntao/proprietary/system_ext/framework/QtiTelephonyServicelibrary.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/QtiTelephonyServicelibrary.jar \
     vendor/lenovo/kuntao/proprietary/system_ext/framework/qcrilhook.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/qcrilhook.jar \
-    vendor/lenovo/kuntao/proprietary/system_ext/framework/qti-telephony-common.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/qti-telephony-common.jar \
     vendor/lenovo/kuntao/proprietary/system_ext/framework/com.qti.dpmframework.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/com.qti.dpmframework.jar \
     vendor/lenovo/kuntao/proprietary/system_ext/framework/dpmapi.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/dpmapi.jar \
     vendor/lenovo/kuntao/proprietary/system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/com.qualcomm.qti.dpm.api@1.0.so \
@@ -696,6 +695,12 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/kuntao/proprietary/vendor/lib64/libsensor_reg.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensor_reg.so \
     vendor/lenovo/kuntao/proprietary/vendor/lib64/sensors.alsps.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sensors.alsps.so \
     vendor/lenovo/kuntao/proprietary/vendor/lib64/sensors.st.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sensors.st.so
+
+# qti telephony configuration
+ifneq ($(TARGET_USE_NEW_QTİ_JAR), true)
+PRODUCT_COPY_FILES += \
+    vendor/lenovo/kuntao/proprietary/system_ext/framework/qti-telephony-common.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/qti-telephony-common.jar
+endif
 
 PRODUCT_PACKAGES += \
     libsdm-disp-vndapis \
