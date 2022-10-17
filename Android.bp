@@ -108,17 +108,6 @@ android_app_import {
 }
 
 android_app_import {
-	name: "IWlanService",
-	owner: "lenovo",
-	apk: "proprietary/vendor/app/IWlanService/IWlanService.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	soc_specific: true,
-}
-
-android_app_import {
 	name: "TimeService",
 	owner: "lenovo",
 	apk: "proprietary/vendor/app/TimeService/TimeService.apk",
@@ -191,6 +180,15 @@ prebuilt_etc_xml {
 	name: "android.hardware.gnss@2.0-service-qti",
 	owner: "lenovo",
 	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.gnss@2.0-service-qti.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
+	name: "manifest_android.hardware.drm@1.2-service.widevine",
+	owner: "lenovo",
+	src: "proprietary/vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.2-service.widevine.xml",
 	filename_from_src: true,
 	sub_dir: "vintf/manifest",
 	soc_specific: true,
